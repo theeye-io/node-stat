@@ -12,6 +12,26 @@ var spawn = require('child_process').spawn;
 var _ = require('lodash');
 var path = require('path');
 
+/**
+ * include all the arquitecture dependecy modules
+ * required to be compiled
+ */
+var Plugins = {
+  win:{
+    disk: require('./plugins/win/disk'),
+    load: require('./plugins/win/load'),
+    mem: require('./plugins/win/mem'),
+    net: require('./plugins/win/net'),
+    stat: require('./plugins/win/stat')
+  },
+  linux:{
+    disk: require('./plugins/linux/disk'),
+    load: require('./plugins/linux/load'),
+    mem: require('./plugins/linux/mem'),
+    net: require('./plugins/linux/net'),
+    stat: require('./plugins/linux/stat')
+  }
+};
 
 function nstat () {
   this._plugins = {};
@@ -19,21 +39,9 @@ function nstat () {
   var platform = os.platform();
 
   if (/win/.test(platform)) { // win32 & win64
-    this.plugin({
-      disk: require('./plugins/win/disk'),
-      load: require('./plugins/win/load'),
-      mem: require('./plugins/win/mem'),
-      net: require('./plugins/win/net'),
-      stat: require('./plugins/win/stat')
-    });
+    this.plugin( Plugins.win );
   } else if (/linux/.test(platform)) {
-    this.plugin({
-      disk: require('./plugins/linux/disk'),
-      load: require('./plugins/linux/load'),
-      mem: require('./plugins/linux/mem'),
-      net: require('./plugins/linux/net'),
-      stat: require('./plugins/linux/stat')
-    });
+    this.plugin( Plugins.linux );
   } else {
     throw new Error('NODE-STAT Platform ' + platform + ' Unsupported');
   }
