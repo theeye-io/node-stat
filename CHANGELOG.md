@@ -1,4 +1,7 @@
 
+# v0.2.6
+
+> replace diskusage reference with an own repo, that contains freezed packages versions
 
 # v0.2.1
 
