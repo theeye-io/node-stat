@@ -1,1 +1,1 @@
-module.exports = require('./node-stat');
+module.exports = require('./lib');

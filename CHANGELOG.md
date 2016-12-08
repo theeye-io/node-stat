@@ -1,3 +1,8 @@
+# v0.2.7
+
+> install diskusage from npm using theeye-node-diskusage repo (no more surprises)     
+
+> organize code structure into folders   
 
 # v0.2.6
 

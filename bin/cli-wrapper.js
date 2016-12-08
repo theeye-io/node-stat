@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-var NStat = require('./');
+var NStat = require('../lib');
 
 // 3rd party modules
 var program = require('commander');
 program
-.version('0.0.0')
-.option('-i,--interval [interval]', 'interval time (sec)')
-.option('-f,--format [format]', 'formatter. [json|color]')
+  .version('0.0.0')
+  .option('-i,--interval [interval]', 'interval time (sec)')
+  .option('-f,--format [format]', 'formatter. [json|color]')
 ;
 
 program.parse(process.argv);
