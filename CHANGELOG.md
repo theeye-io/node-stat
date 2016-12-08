@@ -1,3 +1,7 @@
+# v0.2.8
+
+> rolled back to community version of diskusage
+
 # v0.2.7
 
 > install diskusage from npm using theeye-node-diskusage repo (no more surprises)     
