@@ -3,8 +3,8 @@
 node-stat provides resources monitoring for Linux and Windows.
 
 
-This is an extended version of [Suguru Namura node-stat library](https://www.npmjs.com/package/node-stat).
-This version of the library is being used every day in our own client, which is also in constant development.
+This is an extended version of [Suguru Namura node-stat library](https://github.com/suguru/node-stat).
+This version of the library is being used every day in our own [client](https://github.com/interactar/theeye-agent), which is also in constant development.
 
 
 We didn't have the opportunity to use this library in every Windows/Linux platform.
