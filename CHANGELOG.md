@@ -1,3 +1,7 @@
+# v0.3
+
+> stop updating this README.md. check git log for more information on repo activity
+
 # v0.2.9
 
 > update README.md
