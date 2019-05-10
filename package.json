@@ -1,6 +1,6 @@
 {
   "name": "theeye-node-stat",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "the statistics tool like dstat which outputs JSON. This module works with Linux >= 2.6 and Win32",
   "keywords": [
     "stat",
@@ -18,7 +18,7 @@
   "bugs": "https://github.com/theeye-io/node-stat/issues",
   "homepage": "https://github.com/theeye-io/node-stat",
   "dependencies": {
-    "async": "~2.0.0-rc.3",
+    "async": "~2.0.1",
     "cli-color": "1.1.0",
     "commander": "2.9.0",
     "diskusage": "0.1.5"
