@@ -1,7 +1,5 @@
 
 var clc = require('cli-color');
-var _ = require('lodash');
-
 var clabel = clc.xterm(69);
 var cgray = clc.xterm(8);
 
@@ -130,7 +128,8 @@ exports.header = function(data) {
   var head1 = '';
   var head2 = '';
 
-  _.each(labels, function(set, name) {
+  for (let name in labels) {
+    let set = labels[name]
 
     if (head1.length > 0) {
       head1 += clc.blue('|');
@@ -139,7 +138,7 @@ exports.header = function(data) {
       head2 += clc.blue('|');
     }
 
-    var size = _.size(set);
+    var size = Object.keys(set).length
     var clen = csize[name];
     var llen = (clen+1) * size;
     var hlen = llen - name.length - 1;
@@ -153,36 +152,36 @@ exports.header = function(data) {
     }
 
     var flag = false;
-    _.each(set, function(def, key) {
+    for (let key in set) {
+      let def = set[key]
       if (flag) {
         head2 += ' ';
       } else {
         flag = true;
       }
       head2 += clabel(pad(def.label, clen));
-    });
-
-  });
+    }
+  }
 
   return head1 + '\n' + head2;
-
-};
+}
 
 exports.format = function(data) {
-
   var line = '';
 
-  _.each(labels, function(set, name) {
+  for (let name in labels) {
+    let set = labels[name]
     
-    var values = find(data, name);
-    var vlen = csize[name];
-    var flag = false;
+    var values = find(data, name)
+    var vlen = csize[name]
+    var flag = false
 
     if (line.length > 0) {
       line += clc.blue('|');
     }
 
-    _.each(set, function(value, key) {
+    for (let key in set) {
+      let value = set[key]
 
       if (flag) {
         line += ' ';
@@ -191,11 +190,8 @@ exports.format = function(data) {
       }
 
       line += value.fix(values[key]);
-
-    });
-
-  });
+    }
+  }
 
   return line;
-};
-
+}
