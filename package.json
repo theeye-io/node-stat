@@ -1,6 +1,6 @@
 {
-  "name": "iar-node-stat",
-  "version": "0.2.1",
+  "name": "theeye-node-stat",
+  "version": "0.2.2",
   "description": "the statistics tool like dstat which outputs JSON. This module works with Linux >= 2.6 and Win32",
   "keywords": [
     "stat",
@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/suguru/node-stat.git"
+    "url": "git://github.com/theeye-io/node-stat.git"
   },
-  "bugs": "https://github.com/suguru/node-stat/issues",
-  "homepage": "https://github.com/suguru/node-stat",
+  "bugs": "https://github.com/theeye-io/node-stat/issues",
+  "homepage": "https://github.com/theeye-io/node-stat",
   "dependencies": {
     "async": "2.0.0-rc.3",
     "cli-color": "1.1.0",
     "commander": "2.9.0",
     "diskusage": "0.1.5",
-    "underscore":"1.8.3", 
+    "underscore": "1.8.3",
     "lodash": "4.11.0"
   },
   "os": [
@@ -30,7 +30,7 @@
     "win64",
     "win32"
   ],
-  "author": "Interactar SRL, extended from Suguru Namura <snamura@gmail.com>",
+  "author": "TheEye IO, extended from Suguru Namura <snamura@gmail.com>",
   "contributors": [
     "Suguru Namura <snamura@gmail.com>",
     "Facundo Gonzalez <facugon@interactar.com>",
