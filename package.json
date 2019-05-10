@@ -18,7 +18,7 @@
   "bugs": "https://github.com/theeye-io/node-stat/issues",
   "homepage": "https://github.com/theeye-io/node-stat",
   "dependencies": {
-    "async": "2.0.0-rc.3",
+    "async": "~2.0.0-rc.3",
     "cli-color": "1.1.0",
     "commander": "2.9.0",
     "diskusage": "0.1.5"
